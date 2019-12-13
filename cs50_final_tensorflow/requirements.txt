@@ -1,0 +1,9 @@
+Flask
+gunicorn
+flask_session
+werkzeug
+requests
+keras
+pandas
+numpy
+tensorflow

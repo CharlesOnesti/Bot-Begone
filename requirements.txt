@@ -1,0 +1,9 @@
+Flask
+gunicorn
+flask_session
+selenium
+beautifulsoup4
+psycopg2-binary
+werkzeug
+requests
+numpy
