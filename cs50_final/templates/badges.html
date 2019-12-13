@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Badges
+{% endblock %}
+
+{% block main %}
+
+        <h1>You are a <span class = "{{color}}">{{title}}</span> Bot Hunter!</h1>
+        <br>
+        <br>
+        <h1>Badges</h1>
+        <br>
+         <!--Floating pictures from https://owlcation.com/stem/how-to-align-images-side-by-side-->
+        <div style="opacity: {{changeopacity50}}; float: left; width: 17%; margin-right: 1%; margin-bottom: 0.5em;">
+            <img src="http://50onred.com/wp-content/themes/50onRed-v2/assets/img/blog-ico-company-lg.png" >
+            <h2>Achieved</h2>
+        </div>
+        <div style="opacity: {{changeopacity100}}; float: left; width: 25%; margin-right: 1%; margin-bottom: 0.5em;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Bundesautobahn_100_number.svg/1200px-Bundesautobahn_100_number.svg.png">
+            <h2>Achieved</h2>
+        </div>
+        <div style="opacity: {{changeopacity250}}; float: left; width: 25%; margin-right: 1%; margin-bottom: 0.5em;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bundesautobahn_250_number.svg/1200px-Bundesautobahn_250_number.svg.png">
+            <h2>Achieved</h2>
+        </div>
+        <div style="opacity: {{changeopacity500}}; float: left; width: 25%; margin-right: 1%; margin-bottom: 0.5em;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bundesstra%C3%9Fe_500_number.svg/1200px-Bundesstra%C3%9Fe_500_number.svg.png">
+            <h2>Achieved</h2>
+        </div>
+        <br>
+        <!--https://getbootstrap.com/docs/4.0/content/tables/-->
+        <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Level</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class = "green">Beginner</th>
+                            <td>Less than 100</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class = "blue">Competent</th>
+                            <td>Between 100 and 250</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class = "orange">Advanced</th>
+                            <td colspan="2">Between 250 and 500</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class = "red">Expert</th>
+                            <td colspan="2">Higher than 500</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+
+{% endblock %}

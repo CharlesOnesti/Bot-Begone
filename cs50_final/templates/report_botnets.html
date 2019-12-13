@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Report Botnets
+{% endblock %}
+
+{% block main %}
+<h1>Report your botnets found!</h1>
+<h2>Submit your botnets first for scraping. Afterwards they can be reported here to Twitter and to a relevant security researcher.</h2>
+<form action="/reportbotnets" method="post">
+     <div class="form-group">
+         <input required autocomplete="off" autofocus class="form-control" name="link" placeholder="Link" type="text">
+     </div>
+     <button class="btn btn-primary" type="submit">Report</button>
+ </form>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Leaderboard
+{% endblock %}
+
+{% block main %}
+
+        <h1>Leaderboard</h1>
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Score</th>
+
+                </tr>
+            </thead>
+
+        <tbody>
+        {%for row in users_stored %}
+
+         <tr>
+
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+
+        </tr>
+
+        {%endfor%}
+        <!--https://stackoverflow.com/questions/11026258/html-and-javascript-auto-increment-number-->
+        <script>
+            var tables = document.getElementsByTagName('table');
+            var table = tables[tables.length - 1];
+            var rows = table.rows;
+            for(var i = 1, td; i < rows.length; i++){
+                td = document.createElement('td');
+                td.appendChild(document.createTextNode(i));
+                rows[i].insertBefore(td, rows[i].firstChild);
+            }
+        </script>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Submit Botnets
+{% endblock %}
+
+{% block main %}
+<h1>Submit a link to an account you think is a botnet!</h1>
+    <form action="/submitbotnets" method="post">
+        <div class="form-group">
+            <input required autocomplete="off" autofocus class="form-control" name="link" placeholder="Link" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

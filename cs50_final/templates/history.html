@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+        <h1>Your History</h1>
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Number of Bots Submitted</th>
+                    <th>Additional Bots Found</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+
+        <tbody>
+        {%for row in history_table %}
+
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+        </tr>
+        {%endfor%}
+        </tbody>
+        </table>
+
+{% endblock %}
